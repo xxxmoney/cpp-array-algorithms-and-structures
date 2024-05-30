@@ -13,4 +13,6 @@ add_executable(array_algorithms main.cpp
         queue.cpp
         queue.h
         binary_search_tree.cpp
-        binary_search_tree.h)
+        binary_search_tree.h
+        tree.cpp
+        tree.h)

@@ -5,6 +5,7 @@
 #include "linked_list_double.h"
 #include "queue.h"
 #include "stack.h"
+#include "tree.h"
 
 void TestLinkedList()
 {
@@ -131,6 +132,22 @@ void TestBinarySearchTree()
     tree->Print(BinarySearchTreePrintOrder::PREORDER);
 }
 
+void TestTree()
+{
+    Tree* tree = new Tree(10);
+    tree->Insert(4)->Insert(5)->Insert(8);
+    tree->GetChildren()[0]->Insert(7)->Insert(20);
+    tree->GetChildren()[1]->Insert(55);
+
+    Tree* item = tree->Find(10);
+    std::cout << "Found: " << item->GetValue() << std::endl;
+    item = tree->Find(7);
+    std::cout << "Found: " << item->GetValue() << std::endl;
+
+    tree->Print();
+
+}
+
 int main()
 {
     //TestLinkedList();
@@ -138,6 +155,7 @@ int main()
     //TestStack();
     //TestQueue();
     //TestBinarySearchTree();
+    TestTree();
 
     return 0;
 }

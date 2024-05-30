@@ -15,4 +15,6 @@ add_executable(array_algorithms main.cpp
         binary_search_tree.cpp
         binary_search_tree.h
         tree.cpp
-        tree.h)
+        tree.h
+        quick_sort.cpp
+        quick_sort.h)

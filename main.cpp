@@ -4,6 +4,7 @@
 #include "linked_list.h"
 #include "linked_list_double.h"
 #include "queue.h"
+#include "quick_sort.h"
 #include "stack.h"
 #include "tree.h"
 
@@ -148,6 +149,15 @@ void TestTree()
 
 }
 
+void TestQuickSort()
+{
+    std::vector<int> items = {3, 2, 5, 0, 1, 8, 7, 6, 9, 4};
+    QuickSort sort = QuickSort(items);
+
+    sort.Sort();
+    sort.Print();
+}
+
 int main()
 {
     //TestLinkedList();
@@ -155,7 +165,8 @@ int main()
     //TestStack();
     //TestQueue();
     //TestBinarySearchTree();
-    TestTree();
+    //TestTree();
+    TestQuickSort();
 
     return 0;
 }

@@ -21,19 +21,21 @@ void HeapSort::Heapify(int parentIndex, int heapSize)
     int leftChildIndex = parentIndex * 2 + 1;
     int rightChildIndex = leftChildIndex + 1;
 
-    int smallestIndex = parentIndex;
+    // Find the largest element between parent and its children
+    int swapIndex = parentIndex;
 
-    if(leftChildIndex < heapSize && this->items[leftChildIndex] < this->items[smallestIndex])
-        smallestIndex = leftChildIndex;
+    if(leftChildIndex < heapSize && this->items[leftChildIndex] > this->items[swapIndex])
+        swapIndex = leftChildIndex;
 
-    if(rightChildIndex < heapSize && this->items[rightChildIndex] < this->items[smallestIndex])
-        smallestIndex = rightChildIndex;
+    if(rightChildIndex < heapSize && this->items[rightChildIndex] > this->items[swapIndex])
+        swapIndex = rightChildIndex;
 
-    if(smallestIndex == parentIndex)
+    // If parent is the largest, then we are done
+    if(swapIndex == parentIndex)
         return;
 
-    std::swap(this->items[smallestIndex], this->items[parentIndex]);
-    this->Heapify(smallestIndex, heapSize);
+    std::swap(this->items[swapIndex], this->items[parentIndex]);
+    this->Heapify(swapIndex, heapSize);
 }
 
 void HeapSort::BuildMaxHeap()

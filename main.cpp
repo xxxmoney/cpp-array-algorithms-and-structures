@@ -3,6 +3,7 @@
 #include "binary_search_tree.h"
 #include "linked_list.h"
 #include "linked_list_double.h"
+#include "merge_sort.h"
 #include "queue.h"
 #include "quick_sort.h"
 #include "stack.h"
@@ -158,6 +159,15 @@ void TestQuickSort()
     sort.Print();
 }
 
+void TestMergeSort()
+{
+    std::vector<int> items = {3, 2, 5, 0, 1, 8, 7, 6, 9, 4};
+    MergeSort sort = MergeSort(items);
+
+    sort.Sort();
+    sort.Print();
+}
+
 int main()
 {
     //TestLinkedList();
@@ -166,7 +176,8 @@ int main()
     //TestQueue();
     //TestBinarySearchTree();
     //TestTree();
-    TestQuickSort();
+    //TestQuickSort();
+    TestMergeSort();
 
     return 0;
 }

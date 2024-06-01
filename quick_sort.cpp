@@ -12,6 +12,12 @@ QuickSort::QuickSort(std::vector<int>& items)
     this->items = items;
 }
 
+QuickSort::~QuickSort()
+{
+    this->items.clear();
+}
+
+
 void QuickSort::Sort(int left, int right)
 {
     if(left >= right)

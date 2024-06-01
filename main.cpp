@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "binary_search_tree.h"
+#include "heap_sort.h"
 #include "linked_list.h"
 #include "linked_list_double.h"
 #include "merge_sort.h"
@@ -168,6 +169,15 @@ void TestMergeSort()
     sort.Print();
 }
 
+void TestHeapSort()
+{
+    std::vector<int> items = {3, 2, 5, 0, 1, 8, 7, 6, 9, 4};
+    HeapSort sort = HeapSort(items);
+
+    sort.Sort();
+    sort.Print();
+}
+
 int main()
 {
     //TestLinkedList();
@@ -177,7 +187,8 @@ int main()
     //TestBinarySearchTree();
     //TestTree();
     //TestQuickSort();
-    TestMergeSort();
+    //TestMergeSort();
+    TestHeapSort();
 
     return 0;
 }

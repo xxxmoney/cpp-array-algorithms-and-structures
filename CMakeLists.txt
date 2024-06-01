@@ -19,4 +19,6 @@ add_executable(array_algorithms main.cpp
         quick_sort.cpp
         quick_sort.h
         merge_sort.cpp
-        merge_sort.h)
+        merge_sort.h
+        heap_sort.cpp
+        heap_sort.h)

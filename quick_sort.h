@@ -11,10 +11,11 @@ class QuickSort {
 private:
     std::vector<int> items;
     QuickSort();
+    void Sort(int left, int right);
 
 public:
     QuickSort(std::vector<int>& items);
-    void Sort(int left, int right);
+    ~QuickSort();
 
     std::vector<int>& Sort();
 

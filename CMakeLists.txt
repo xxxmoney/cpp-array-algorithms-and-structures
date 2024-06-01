@@ -17,4 +17,6 @@ add_executable(array_algorithms main.cpp
         tree.cpp
         tree.h
         quick_sort.cpp
-        quick_sort.h)
+        quick_sort.h
+        merge_sort.cpp
+        merge_sort.h)

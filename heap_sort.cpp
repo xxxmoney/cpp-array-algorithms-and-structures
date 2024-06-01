@@ -48,11 +48,13 @@ std::vector<int>& HeapSort::Sort()
 {
     this->BuildMaxHeap();
     int topIndex = 0;
+    // Start with the heap size - 1, because the last element is already sorted from the BuildMaxHeap
     for (int heapSize = this->items.size() - 1; heapSize >= 0; --heapSize)
     {
-        // Swap top with current last
+        // Set the biggest element at the end, after the current end
         std::swap(this->items[topIndex], this->items[heapSize]);
 
+        // Heapify only the part without the last sorted elements
         this->Heapify(topIndex, heapSize);
     }
 
